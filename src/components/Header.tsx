@@ -41,9 +41,8 @@ const Header: FC<HeaderProps> = ({ toggleTheme, theme }) => {
           </div>
           <nav className="mx-6  items-center space-x-4 lg:space-x-6 hidden md:block">
             {headerRoutes.map((route, i) => (
-              <Button asChild variant="ghost">
+              <Button asChild variant="ghost" key={i}>
                 <a
-                  key={i}
                   href={route.href}
                   className="text-sm font-medium transition-colors"
                 >

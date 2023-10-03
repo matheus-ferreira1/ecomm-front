@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
+import Home from "./components/Home";
 
 type Theme = "light" | "dark";
 
@@ -29,6 +30,7 @@ function App() {
   return (
     <div>
       <Header theme={theme} toggleTheme={toggleTheme} />
+      <Home />
     </div>
   );
 }

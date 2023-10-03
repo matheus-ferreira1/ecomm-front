@@ -1,4 +1,4 @@
-import ProductCard from "@/components/ui/ProductCard";
+import ProductCard from "./ui/ProductCard";
 import { Product } from "../constants/types";
 
 interface ProductListProps {
