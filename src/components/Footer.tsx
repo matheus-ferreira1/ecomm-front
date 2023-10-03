@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="border-t py-4">
       <Container>
         <div className="relative px-4 sm:px-6 lg:px-8 h-16 flex flex-col items-center justify-center gap-2">
-          <p className="font-thin">Desenvolvido por Matheus Ferreira </p>
+          <p className="font-thin">Developed by Matheus Ferreira - 2023</p>
           <div className="flex gap-2">
             <a
               className="hover:text-primary transition-colors duration-200"
