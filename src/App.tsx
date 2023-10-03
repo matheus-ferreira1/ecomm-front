@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Loading from "./components/Loading";
+import Footer from "./components/Footer";
 
 type Theme = "light" | "dark";
 
@@ -42,6 +43,8 @@ function App() {
       <Header theme={theme} toggleTheme={toggleTheme} />
 
       {loading ? <Loading /> : <Home />}
+
+      <Footer />
     </div>
   );
 }
