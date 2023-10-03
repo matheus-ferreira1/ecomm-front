@@ -1,18 +1,28 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Loading from "./components/Loading";
 
 type Theme = "light" | "dark";
 
 function App() {
   const [theme, setTheme] = useState<Theme | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
     } else {
       setTheme("light");
     }
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   useEffect(() => {
@@ -30,7 +40,8 @@ function App() {
   return (
     <div>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Home />
+
+      {loading ? <Loading /> : <Home />}
     </div>
   );
 }
