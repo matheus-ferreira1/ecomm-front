@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { Menu, Moon, ShoppingCart, Sun } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import ProfileButton from "./ui/ProfileButton";
-import { headerRoutes } from "../contants/data";
+import { headerRoutes } from "../constants/data";
 
 interface HeaderProps {
   toggleTheme: () => void;
